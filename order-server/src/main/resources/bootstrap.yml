@@ -1,0 +1,12 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: order_server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        namespace: b353e4f7-8f26-4581-b653-f2b0f788aac8
+        file-extension: yml

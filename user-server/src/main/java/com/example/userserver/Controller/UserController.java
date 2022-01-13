@@ -1,0 +1,9 @@
+package com.example.userserver.Controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class UserController {
+
+
+}

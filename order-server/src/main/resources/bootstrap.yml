@@ -1,9 +1,9 @@
-server:
-  port: 8090
 spring:
   application:
-    name: order_server
+    #默认为 spring.application.name的值
+    name: order-server
   cloud:
+    #Nacos Data Id:name-环境对应的profile.配置内容格式
     nacos:
       discovery:
         server-addr: localhost:8848

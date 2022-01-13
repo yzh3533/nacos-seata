@@ -1,10 +1,12 @@
-server:
-  port: 8081
 spring:
   application:
-    name: user_server
+    #默认为 spring.application.name的值
+    name: user-server
   cloud:
+      #Nacos Data Id:name-环境对应的profile.配置内容格式
     nacos:
       discovery:
         server-addr: localhost:8848
+      config:
+        namespace: b353e4f7-8f26-4581-b653-f2b0f788aac8
         file-extension: yml

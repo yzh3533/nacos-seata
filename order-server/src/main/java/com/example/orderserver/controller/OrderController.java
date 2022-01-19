@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class OrderController {
 
-    @Value("${pattern.dateformat}")
-    private String dateformat;
+//    @Value("${pattern.dateformat}")
+//    private String dateformat;
     @Autowired
     private OrderService orderService;
 

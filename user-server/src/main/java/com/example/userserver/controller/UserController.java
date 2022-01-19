@@ -1,20 +1,25 @@
-package com.example.userserver.Controller;
+package com.example.userserver.controller;
 
-import com.example.feignclient.OrderClient;
+
+import com.example.userserver.service.UserService;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
+import java.math.BigDecimal;
 
 @RestController
 public class UserController {
 
-    @Resource
-    private OrderClient orderClient;
+
+
+    @Autowired
+    private UserService userService;
 
     @GetMapping("/user")
     public void createOrder(){
-        orderClient.create();
+
+        userService.updateAccount(new BigDecimal("20"),1L);
     }
 }

@@ -11,7 +11,7 @@ public class OrderDao {
     private JdbcTemplate jdbcTemplate;
 
     public void createOrder(Long userId,Long num){
-        String sql = "insert into order(user_id,num) values(?,?)";
+        String sql = "insert into `order` (user_id,num) values (?,?);";
         jdbcTemplate.update(sql,userId,num);
     }
 }

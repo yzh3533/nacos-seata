@@ -8,10 +8,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication(scanBasePackages  = {"com.example.*"})
-@EnableDiscoveryClient
-@EnableFeignClients
+//@EnableDiscoveryClient
+@EnableFeignClients(basePackages = {"com.example.*"})
 @ComponentScan(basePackages = {"com.example.*"})
-@ServletComponentScan(basePackages = {"com.example.*"})
+@ServletComponentScan
 public class UserServerApplication {
 
     public static void main(String[] args) {

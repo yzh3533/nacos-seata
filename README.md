@@ -1,6 +1,5 @@
+这是一个简单的nacos-seata分布式事务解决方案demo
 # Nacos
-
-Nacos文档：
 
 ## [Nacos快速入门](https://nacos.io/zh-cn/docs/quick-start.html)
 

@@ -7,7 +7,6 @@ import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 
@@ -20,7 +19,7 @@ public class UserService {
     @Autowired
     private UserDao dao;
 
-    @GlobalTransactional(timeoutMills = 300000, name = "dubbo-gts-seata-example")
+    @GlobalTransactional(timeoutMills = 300000, name = "seata-example")
     public void updateAccount(BigDecimal price, Long id,Boolean flag){
         log.info("开始全局事务，XID = " + RootContext.getXID());
         orderClient.create();

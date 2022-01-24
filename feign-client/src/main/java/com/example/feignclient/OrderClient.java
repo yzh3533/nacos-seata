@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface OrderClient {
 
     @GetMapping("/order/create")
-    String create();
+    void create();
 
 }

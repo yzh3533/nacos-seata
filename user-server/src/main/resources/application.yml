@@ -1,6 +1,16 @@
 server:
   port: 8081
 spring:
+  application:
+    #默认为 spring.application.name的值
+    name: user-server
+  cloud:
+    #Nacos Data Id:name-环境对应的profile.配置内容格式
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        file-extension: yml
   datasource:
     url: jdbc:mysql://localhost:3306/nacos-seata?allowMultiQueries=true&useSSL=false
     username: root

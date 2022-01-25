@@ -13,4 +13,8 @@ public class OrderService {
     public void createOrder(Long userId,Long num){
         dao.createOrder(userId, num);
     }
+
+    public void updateOrder(){
+        dao.updateOrder();
+    }
 }

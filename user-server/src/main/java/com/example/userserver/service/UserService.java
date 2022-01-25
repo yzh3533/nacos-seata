@@ -22,10 +22,12 @@ public class UserService {
     @GlobalTransactional(timeoutMills = 300000, name = "seata-example")
     public void updateAccount(BigDecimal price, Long id,Boolean flag){
         log.info("开始全局事务，XID = " + RootContext.getXID());
+        orderClient.update();
         orderClient.create();
         if(flag) {
             throw new RuntimeException("测试抛异常后，分布式事务回滚！");
         }
         dao.updateAccount(price, id);
+        System.out.println("=====");
     }
 }

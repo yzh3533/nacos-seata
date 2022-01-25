@@ -14,4 +14,9 @@ public class OrderDao {
         String sql = "insert into `order` (user_id,num) values (?,?);";
         jdbcTemplate.update(sql,userId,num);
     }
+
+    public void updateOrder(){
+        String sql = "UPDATE `order` SET num = num + 1 WHERE id = 40;";
+        jdbcTemplate.update(sql);
+    }
 }
